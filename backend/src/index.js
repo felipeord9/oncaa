@@ -6,7 +6,7 @@ const routerApi = require("./v1/routes");
 const { errorHandler, boomErrorHandler, ormErrorHandler } = require('./middlewares/errorHandler')
 const { config } = require("./config/config");
 
-const { port, host, frontend } = config;
+const { port, host } = config;
 
 const app = express();
 
@@ -36,7 +36,6 @@ app.use(boomErrorHandler)
 app.use(errorHandler)
 
 // Iniciar servidor en un host y puerto
-app.listen(frontend, () => {
-  /* console.log(`Server on http://${host}:${port}`); */
-  console.log(`Server on ${frontend}`);
+app.listen(port, host, () => {
+  console.log(`Server on http://${host}:${port}`);
 });
