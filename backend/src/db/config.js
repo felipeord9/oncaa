@@ -14,6 +14,11 @@ module.exports = {
     client: 'pg',
     connection: config.dbUrl,
     url: config.dbUrl,
-    dialect: 'postgres'
+    dialect: 'postgres',
+    dialectOptions: {
+      ssl: {
+        rejectUnauthorized: false
+      }
+    }
   },
 }
