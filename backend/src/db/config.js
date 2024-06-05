@@ -11,6 +11,8 @@ module.exports = {
     }
   },
   development: {
+    client: 'pg',
+    connection: config.dbUrl,
     url: config.dbUrl,
     dialect: 'postgres'
   },

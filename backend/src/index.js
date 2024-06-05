@@ -6,7 +6,7 @@ const routerApi = require("./v1/routes");
 const { errorHandler, boomErrorHandler, ormErrorHandler } = require('./middlewares/errorHandler')
 const { config } = require("./config/config");
 
-const { port, host } = config;
+const { port, host, url } = config;
 
 const app = express();
 
@@ -37,5 +37,6 @@ app.use(errorHandler)
 
 // Iniciar servidor en un host y puerto
 app.listen(port, host, () => {
-  console.log(`Server on http://${host}:${port}`);
+  /* console.log(`Server on http://${host}:${port}`); */
+  console.log(`Server on ${url}`);
 });
