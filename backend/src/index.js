@@ -37,6 +37,6 @@ app.use(errorHandler)
 
 // Iniciar servidor en un host y puerto
 app.listen(port, host, () => {
-  /* console.log(`Server on http://${host}:${port}`); */
-  console.log(`Server on ${url}`);
+  console.log(`Server on http://${host}:${port}`);
+  /* console.log(`Server on ${url}`); */
 });
